@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/bde787f331.js" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" href = "./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <link rel = "icon" href = "./img/icon.png">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <div class = "theBiggest">
+
+        <div class = "how">How to use this calculator? (click)
+            <div class = "rules">
+                1. This calculator can perform operations only on two numbers; <br>
+                2. There are common actions like addition (+), subtraction (-), multiplication (x), division (/), modul (|x|), degree (x<sup>n</sup>), factorial (n!). Feel free to use them without any hesitation! <br>
+                3. Also there are some special actions: calculating the remainder of the division (%), calculating the whole part of the division (mod), any root (<sup>n</sup><span>&#8730 x</span>) - at first you need to enter the degree, click on the root button and then enter the num which root you want to find; <br>
+                4. There are two transforming buttons. You can transform arabic numbers to roman (1 &#8594; <span class = "roman">I</span>) and vice versa (<span class = "roman">I</span> &#8594; 1);<br>
+                5. And finally there are some convertional buttons. You can convert decimal numbers to Binary (Bin), Hexadecimal (Hexa) and back to decimal from these counting systems (Dec from Bin and Dec from Hexa);<br>
+                6. You can enter your numbers and actions straight to the process line, but for your convenience you can switch between keyboards using the list on the right part of the window. But be attentive: almost all actions (with the exception of appropriate convertional or transforming actions) can be performed only on decimal numbers.
+            </div>
+        </div>
+                
+        <div class = "calcBody">
+            <div class = "screen">
+                <input type="text" id='process' class = 'input' placeholder='0'>
+                <input type="text" id='result' class = 'input' placeholder='0' readonly>
+            </div>
+
+            <button class = "btn button angle remainder" value = "%">%</button>
+            <button class = "btn button angle whole" value = "mod">mod</button>
+            <button class = "btn button angle modul" value = "abs">|x|</button>
+            <button class = "btn button spec clear">C</button>
+            <button class = "btn button spec backspace"><i class="fas fa-backspace"></i></button>
+
+            <button class = "btn button angle factorial" value = "!">n!</button>
+            <button class = "btn button angle root" value = "√"><sup>n</sup><span>&#8730 x</span></button>
+            <button class = "btn button angle degree" value = "^">x<sup>n</sup></button>
+            <button class = "btn button angle division" value = "/">/</button>
+
+            <button class = "btn button digit seven" value = "7">7</button>
+            <button class = "btn button digit eight" value = "8">8</button>
+            <button class = "btn button digit nine" value = "9">9</button>
+            <button class = "btn button angle multi" value = "x">x</button>
+
+            <button class = "btn button digit four" value = "4">4</button>
+            <button class = "btn button digit five" value = "5">5</button>
+            <button class = "btn button digit six" value = "6">6</button>
+            <button class = "btn button angle subtraction" value = "-">-</button>
+
+            <button class = "btn button digit one"  value = "1">1</button>
+            <button class = "btn button digit two"  value = "2">2</button>
+            <button class = "btn button digit three" value = "3">3</button>
+            <button class = "btn button angle addition" value = "+">+</button>
+
+            <button class = "btn button digit zero" value = "0">0</button>
+            <button class = "btn button point" value = ".">.</button>
+            <button class = "btn button angle toRoman" value = " → I ">1 &#8594; <span class = "roman">I</span></button>
+            <button class = "btn button angle toArabic" value = " → 1 "><span class = "roman">I</span> &#8594; 1</button>
+
+            <button class = "btn buttonLow toBinary" value = " to 2 ">Bin</button>
+            <div>
+                <button class = "btn buttonLow toDecimalFromBinary" value = " to 10 from 2 ">Dec from Bin</button>
+                <button class = "btn buttonLow toDecimalFromHexa" value = " to 10 from 16 ">Dec from Hexa</button>
+            </div>
+            <button class = "btn buttonLow toHexa" value = " to 16 ">Hex</button>
+            <button class = "btn equal">=</button>
+        </div>
+        
+            <div class = "radioBtns">
+                <div>Keyboard switch:</div>
+                <div>
+                    <input type="radio" id="firstRadio" class = "option-input radio" name="keyboard" value="usual" checked>
+                    <label for="firstRadio">Usual keyboard</label>
+
+                    <div>
+                        <input type="radio" id="secondRadio"  class = "option-input radio" name="keyboard" value="hexa">
+                        <label for="secondRadio">Hexadecimal keyboard</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="thirdRadio"  class = "option-input radio" name="keyboard" value="roman">
+                        <label for="thirdRadio">Roman keyboard</label>
+                    </div>
+                </div>
+            </div>
+
+</div>
+    
+    <script src = "./script.js"></script>
+
+</body>
+</html>
+
+ 

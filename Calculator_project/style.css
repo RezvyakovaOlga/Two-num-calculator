@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+		radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+
+/* using rules */
+
+.how {
+    font-size: 25px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.rules {
+    font-size: 15px;
+    visibility: hidden;
+    width: 400px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.radioBtns {
+    display:block;
+    width: 400px;
+    margin-top: 20px;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* body of the calculator */
+
+.calcBody {
+    /* margin: 30px auto 20px 180px; */
+    margin: 27px auto;
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.screen {
+    box-sizing: border-box;
+    width: 500px;
+    height: 150px;
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    text-align: right;
+    padding: 25px 20px 0 0
+}
+
+.input {
+    background: none;
+    border:none;
+    text-align: right;
+    outline: none;
+    width: 100%;
+    
+}
+
+#result, #result::placeholder  {
+    font-size: 60px;   
+    color: white;
+}
+
+#process, #process::placeholder  {
+    font-size: 30px;
+    color: #5d4a1f;
+}
+
+.theBiggest {
+    display: flex;
+}
+
+/* buttons */
+
+.button {
+    width: 125px;
+    height: 78px; 
+}
+
+.digit, .point {
+    background-image: linear-gradient(to right, white, rgb(246, 253, 203));  
+}
+
+
+.buttonLow {
+    width: 110px;
+    height: 82px;
+}
+
+
+.equal {
+    width: 170px;
+    height: 82px;
+    border-radius: 0 0 10px 0;
+    background-image: linear-gradient(to right, #5d4a1f, #91773c);
+}
+
+.clear, .toRoman {
+    width: 62px;
+}
+
+.backspace, .toArabic {
+    width: 63px;  
+}
+
+.button, .buttonLow, .equal, .spec {
+    border: none;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+
+.toDecimalFromBinary, .toDecimalFromHexa {
+    height: 41px;
+    font-size: 15px;
+    display: block;
+}
+
+.button:hover, .buttonLow:hover, .equal:hover {
+    filter: brightness(90%)
+}
+
+.angle, .buttonLow, .spec {
+    background-image: linear-gradient(to right, #d4a84e, #f1c46a);
+}
+
+.toBinary {
+    border-radius: 0 0 0 10px;
+}
+
+.roman, input {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.zero {
+    width: 250px;
+}
+
+sup {
+    font-size: 13px;
+}
+
+/* radio */
+
+@keyframes click-wave {
+    0% {
+      height: 40px;
+      width: 40px;
+      opacity: 0.35;
+      position: relative;
+    }
+    100% {
+      height: 200px;
+      width: 200px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+    }
+  }
+  
+  .option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 15px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+  }
+  .option-input:hover {
+    background: #9faab7;
+  }
+  .option-input:checked {
+    background: #5d4a1f;
+  }
+  .option-input:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: "✔";
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: center;
+    line-height: 40px;
+  }
+  .option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #5d4a1f;
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .option-input.radio {
+    border-radius: 50%;
+  }
+  .option-input.radio::after {
+    border-radius: 50%;
+  }
